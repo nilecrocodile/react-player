@@ -34,7 +34,7 @@ export class YouTube extends Component {
         this.player.loadPlaylist(parsePlaylist(url))
         return
       }
-      this.player.cueVideoById({
+      this.player.loadVideoById({
         videoId: id,
         startSeconds: parseStartTime(url) || playerVars.start,
         endSeconds: parseEndTime(url) || playerVars.end

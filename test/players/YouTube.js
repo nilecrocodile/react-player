@@ -72,9 +72,9 @@ test('load() when ready', t => {
   const instance = shallow(
     <YouTube url={TEST_URL} config={TEST_CONFIG} />
   ).instance()
-  instance.player = { cueVideoById: sinon.fake() }
+  instance.player = { loadVideoById: sinon.fake() }
   instance.load(TEST_URL, true)
-  t.true(instance.player.cueVideoById.calledOnceWith({
+  t.true(instance.player.loadVideoById.calledOnceWith({
     videoId: 'oUFJJNQGwhk',
     startSeconds: undefined,
     endSeconds: undefined
